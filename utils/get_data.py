@@ -1,18 +1,17 @@
 import json
 import datetime
-import glob
 
 
 from utils.days import get_name_weekday
 
 
 
-json_files = glob.glob('timetable\*.json')
+json_files = 'timetable\*.json'
 
 
-def get_day_data(message, day_number):
+def get_day_data(message, day_number) -> str:
     info = []
-    with open(json_files[0], 'r') as f: 
+    with open(json_files, 'r') as f: 
         text = json.load(f)
         for faculty in text["faculties"][0]["groups"]:
             if message.lower() == faculty["group_name"].lower():
@@ -39,9 +38,9 @@ def get_day_data(message, day_number):
     return ' '.join(str(x) for x in info)
 
 
-def get_week_data(message):
+def get_week_data(message) -> str:
     info = []
-    with open(json_files[0], 'r') as f: 
+    with open(json_files, 'r') as f: 
         text = json.load(f)
         for faculty in text["faculties"][0]["groups"]:
             if message.lower() == faculty["group_name"].lower():
@@ -62,3 +61,7 @@ def get_week_data(message):
                 break
                 
     return ' '.join(str(x) for x in info)
+
+
+list = []
+type(list)

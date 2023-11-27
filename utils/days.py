@@ -8,8 +8,10 @@ weekday_mapping = {
     6: "Суббота"
 }
 
-def get_name_weekday(day_number):
+def get_name_weekday(day_number: int) -> str:
 
     day_of_week = weekday_mapping.get(day_number)
 
     return day_of_week
+
+
