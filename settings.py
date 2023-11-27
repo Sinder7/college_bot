@@ -11,7 +11,7 @@ class Bots():
 class Settings():
     bot: Bots
 
-def get_settings(path: str):
+def get_settings(path: str) -> str:
     env = Env()
     env.read_env(path)
 
