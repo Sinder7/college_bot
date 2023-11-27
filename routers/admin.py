@@ -12,7 +12,7 @@ router.message.filter(
 )
 
 @router.message(F.document)
-async def download_json_file(message: Message,  bot: Bot):
+async def download_json_file(message: Message,  bot: Bot) -> None:
     mime_type = message.document.mime_type
     if mime_type == 'application/json':
         os.remove("timetable/text.json")
