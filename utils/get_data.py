@@ -6,7 +6,7 @@ from utils.days import get_name_weekday
 
 
 
-json_files = 'timetable\*.json'
+json_files = 'college_bot/timetable/text.json'
 
 
 def get_day_data(message, day_number) -> str:

@@ -21,4 +21,4 @@ def get_settings(path: str) -> str:
         )
     )
 
-settings = get_settings('.env')
+settings = get_settings('college_bot/.env')
