@@ -1,5 +1,4 @@
-from dotenv import load_dotenv
-from dataclasses import dataclass
+\from dataclasses import dataclass
 from environs import Env
 
 
